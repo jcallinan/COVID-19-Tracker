@@ -1,11 +1,14 @@
 // home_material.dart
 import 'package:flutter/material.dart';
 import 'models/user.dart';
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+title: 'Flutter Database Example',
+home: MyApp(), ));
 class MyApp extends StatefulWidget {
   @override
   _COVIDCollectDataState createState() => _COVIDCollectDataState();
 }
+
 class _COVIDCollectDataState extends State {
   final _formKey = GlobalKey();
   final _user = User();
