@@ -2,9 +2,9 @@
 class User {
   String firstName = '';
   String lastName = '';
-  double Temperature = 0.0;
-  String DateTimeTaken;
-  bool newsletter = false;
+  double temperature = 0.0;
+  String dateTimeTaken;
+  String notes;
   save() {
     print('saving user');
   }

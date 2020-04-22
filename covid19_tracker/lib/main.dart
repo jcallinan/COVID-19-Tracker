@@ -15,7 +15,7 @@ class _COVIDCollectDataState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Profile')),
+        appBar: AppBar(title: Text('Event')),
         body: Container(
             padding:
             const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
@@ -46,19 +46,29 @@ class _COVIDCollectDataState extends State {
                               },
                               onSaved: (val) =>
                                   setState(() => _user.lastName = val)),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
-                            child: Text('Subscribe'),
-                          ),
-                          SwitchListTile(
-                              title: const Text('Monthly Newsletter'),
-                              value: _user.newsletter,
-                              onChanged: (bool val) =>
-                                  setState(() => _user.newsletter = val)),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
-                            child: Text('Interests'),
-                          ),
+                          TextFormField(
+                              decoration:
+                              InputDecoration(labelText: 'Temperature'),
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter the temperature taken.';
+                                }
+                              },
+                              onSaved: (val) =>
+                                  setState(() => _user.temperature = double.tryParse(val))),
+                          TextFormField(
+                              decoration:
+                              InputDecoration(labelText: 'Date / Time'),
+
+                              onSaved: (val) =>
+                                  setState(() => _user.dateTimeTaken = val)),
+
+                          TextFormField(
+                              decoration:
+                              InputDecoration(labelText: 'Notes'),
+
+                              onSaved: (val) =>
+                                  setState(() => _user.notes = val)),
 
                           Container(
                               padding: const EdgeInsets.symmetric(
