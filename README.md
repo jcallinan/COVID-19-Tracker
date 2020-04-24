@@ -1,6 +1,6 @@
 # COVID19 / Coronavirus tracker wih Firebase Realtime Database with Swift, Kotlin & Dart (Flutter)
 
-![COVID Event](COVID-Event.png)
+![COVID Event](COVID-Event-Full-Form.png)
 # Flutter
 
 Requirement : Flutter 1.7.9
