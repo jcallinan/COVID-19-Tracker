@@ -5,7 +5,7 @@ import 'models/user.dart';
 import 'package:http/http.dart' as http;
 Future<User> sendEvent(String firstName, String lastName, String temperature, String dateTimeTaken,String notes) async {
   final http.Response response = await http.post(
-    'https://argslsdev.eastus.cloudapp.azure.com:16500//EventService.asmx/SaveEvent',
+    'https://server/service',
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
